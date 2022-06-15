@@ -24,3 +24,7 @@
 -overloadaggressively
 -repackageclasses 'wisdom'
 -allowaccessmodification
+
+-keep public class kz.kbtu.idcarddetectionlibrary.ObjectDetectionActivity
+-keep public class kz.kbtu.idcarddetectionlibrary.HintActivity
+
