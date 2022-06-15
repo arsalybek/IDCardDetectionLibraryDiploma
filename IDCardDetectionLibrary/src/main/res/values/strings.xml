@@ -84,7 +84,7 @@
     <string name="give_camera_permission">Give camera permission</string>
     <string name="go_to">Continue</string>
     <string name="id_title">Validate your ID</string>
-    <string name="id_description">Please scan your ID card (residence permit or passport) to validate your identity.\nThe photo must be clear, not blurry, without sun glare</string>
+    <string name="id_description">Please scan your ID card (residence permit or passport) to validate your identity.\n\nThe photo must be clear, not blurry, without sun glare.</string>
     <string name="prompt_point_to_front_side">Point the camera at the front side</string>
     <string name="prompt_point_to_back_side">Point the camera at the back side</string>
 
