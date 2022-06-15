@@ -28,9 +28,9 @@ object PreferenceUtils {
       .apply()
   }
 
-  fun getIdFrontSideImagePath(context: Context): String? = getStringPref(context, R.string.pref_key_id_front_side_path, "")
+  fun getFrontSideImagePath(context: Context): String? = getStringPref(context, R.string.pref_key_id_front_side_path, "")
 
-  fun getIdBackSideImagePath(context: Context): String? = getStringPref(context, R.string.pref_key_id_back_side_path, "")
+  fun getBackSideImagePath(context: Context): String? = getStringPref(context, R.string.pref_key_id_back_side_path, "")
 
   fun cleanPreviousSavedImagePaths(context: Context) {
     saveStringPreference(context, R.string.pref_key_id_front_side_path, "")

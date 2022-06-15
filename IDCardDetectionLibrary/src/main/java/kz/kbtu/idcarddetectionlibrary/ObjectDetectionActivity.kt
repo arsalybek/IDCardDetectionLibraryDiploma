@@ -147,7 +147,16 @@ abstract class ObjectDetectionActivity : AppCompatActivity(), OnClickListener {
                 if (currentFlowType == FlowType.DOUBLE_SIDE && (isFrontSideImageSaved() == false || isBackSideImageSaved() == false)) {
                     workflowModel?.setWorkflowState(WorkflowState.DETECTING)
                 } else {
-                    onImagesConfirmed()
+                    val savedImagesPathList: MutableList<String> = mutableListOf()
+                    if (isFrontSideImageSaved() == true) savedImagesPathList.add(
+                        PreferenceUtils.getFrontSideImagePath(applicationContext)
+                            .toString()
+                    )
+                    if (isBackSideImageSaved() == true) savedImagesPathList.add(
+                        PreferenceUtils.getBackSideImagePath(applicationContext)
+                            .toString()
+                    )
+                    onImagesConfirmed(savedImagesPathList)
                 }
             }
         }
@@ -201,7 +210,7 @@ abstract class ObjectDetectionActivity : AppCompatActivity(), OnClickListener {
                 val byteArray: ByteArray = stream.toByteArray()
                 filePath = FileHelper.writeImageFileToDisk(applicationContext, byteArray)
                 Log.e("searchedObject_observe", "hi")
-                if (PreferenceUtils.getIdFrontSideImagePath(applicationContext)
+                if (PreferenceUtils.getFrontSideImagePath(applicationContext)
                         ?.isEmpty() == true
                 ) PreferenceUtils.saveStringPreference(
                     applicationContext,
@@ -225,7 +234,7 @@ abstract class ObjectDetectionActivity : AppCompatActivity(), OnClickListener {
             WorkflowState.DETECTING -> {
                 promptChip?.visibility = View.VISIBLE
                 promptChip?.text =
-                    if (PreferenceUtils.getIdFrontSideImagePath(applicationContext)
+                    if (PreferenceUtils.getFrontSideImagePath(applicationContext)
                             ?.isEmpty() == true
                     ) getString(R.string.prompt_point_to_front_side) else getString(R.string.prompt_point_to_back_side)
                 takePhotoButton?.visibility = View.VISIBLE
@@ -260,10 +269,10 @@ abstract class ObjectDetectionActivity : AppCompatActivity(), OnClickListener {
     }
 
     private fun isFrontSideImageSaved() =
-        PreferenceUtils.getIdFrontSideImagePath(applicationContext)?.isNotEmpty()
+        PreferenceUtils.getFrontSideImagePath(applicationContext)?.isNotEmpty()
 
     private fun isBackSideImageSaved() =
-        PreferenceUtils.getIdBackSideImagePath(applicationContext)?.isNotEmpty()
+        PreferenceUtils.getBackSideImagePath(applicationContext)?.isNotEmpty()
 
     private fun vibratePhone() {
         val vibrator = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
@@ -274,9 +283,9 @@ abstract class ObjectDetectionActivity : AppCompatActivity(), OnClickListener {
         }
     }
 
-    abstract fun onImagesConfirmed()
+    abstract fun onImagesConfirmed(pathList: List<String>)
 
-    fun setDetectionFlowType(flowType: FlowType) {
+    public fun setDetectionFlowType(flowType: FlowType) {
         currentFlowType = flowType
     }
 
