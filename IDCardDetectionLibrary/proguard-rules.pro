@@ -20,11 +20,3 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
--optimizationpasses 3
--overloadaggressively
--repackageclasses 'wisdom'
--allowaccessmodification
-
--keep public class kz.kbtu.idcarddetectionlibrary.ObjectDetectionActivity
--keep public class kz.kbtu.idcarddetectionlibrary.HintActivity
-
