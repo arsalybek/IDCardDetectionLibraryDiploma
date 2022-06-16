@@ -1,8 +1,8 @@
 # IDCardDetectionLibraryDiploma
 
-![Screenshots](https://github.com/arsalybek/IDCardDetectionLibraryDiploma/blob/master/screenshot_1.jpeg =311x640)
-![](https://github.com/arsalybek/IDCardDetectionLibraryDiploma/blob/master/screenshot_2.jpeg =311x640)
-![](https://github.com/arsalybek/IDCardDetectionLibraryDiploma/blob/master/screenshot_3.jpeg =311x640)
+<img src="https://github.com/arsalybek/IDCardDetectionLibraryDiploma/blob/master/screenshot_1.jpeg" width="311" height="640">
+<img src="https://github.com/arsalybek/IDCardDetectionLibraryDiploma/blob/master/screenshot_2.jpeg" width="311" height="640">
+<img src="https://github.com/arsalybek/IDCardDetectionLibraryDiploma/blob/master/screenshot_3.jpeg" width="311" height="640">
 
 
 Gradle
