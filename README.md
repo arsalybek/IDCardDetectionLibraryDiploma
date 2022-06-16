@@ -1,5 +1,10 @@
 # IDCardDetectionLibraryDiploma
 
+![Screenshots](https://github.com/arsalybek/IDCardDetectionLibraryDiploma/blob/master/screenshot_1.jpeg)
+![](https://github.com/arsalybek/IDCardDetectionLibraryDiploma/blob/master/screenshot_2.jpeg)
+![](https://github.com/arsalybek/IDCardDetectionLibraryDiploma/blob/master/screenshot_3.jpeg)
+
+
 Gradle
 ------
 ```
@@ -29,6 +34,6 @@ extend kz.kbtu.idcarddetectionlibrary.ObjectDetectionActivity:
   // override this method to set detection flow as single or double image required
 }
 -fun setCustomModelPath(path: String) {
-// override this method to set path for custom model to classify detected objects
+  // override this method to set path for custom model to classify detected objects
 }
 ```
