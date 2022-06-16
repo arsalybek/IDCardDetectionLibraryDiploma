@@ -1,8 +1,9 @@
 # IDCardDetectionLibraryDiploma
-
-<img src="https://github.com/arsalybek/IDCardDetectionLibraryDiploma/blob/master/screenshot_1.jpeg" width="311" height="640">
-<img src="https://github.com/arsalybek/IDCardDetectionLibraryDiploma/blob/master/screenshot_2.jpeg" width="311" height="640">
-<img src="https://github.com/arsalybek/IDCardDetectionLibraryDiploma/blob/master/screenshot_3.jpeg" width="311" height="640">
+<div>
+<img src="https://github.com/arsalybek/IDCardDetectionLibraryDiploma/blob/master/screenshot_1.jpeg" width="250" height="512">
+<img src="https://github.com/arsalybek/IDCardDetectionLibraryDiploma/blob/master/screenshot_2.jpeg" width="250" height="512">
+<img src="https://github.com/arsalybek/IDCardDetectionLibraryDiploma/blob/master/screenshot_3.jpeg" width="250" height="512">
+    </div>
 
 
 Gradle
